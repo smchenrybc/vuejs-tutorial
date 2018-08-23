@@ -7,16 +7,14 @@ new Vue({
   el: "#vue-app",
   data: {
     name: "Sean",
-    age: 33
+    age: "33"
   },
   methods: {
-    logName: function(event) {
-      let name = event.target.value;
-      console.log('You entered ' + name + '!');
-    },
-    logAge: function(event) {
-      let age = event.target.value;
-      console.log('You entered ' + age + '!');
-    },
+    // addName: function() {
+    //   this.name =
+    // },
+    // addAge: function() {
+    //   this.age =
+    // },
   }
 });
