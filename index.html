@@ -15,21 +15,17 @@
 <body>
   <div id="vue-app">
     <div class="main">
-      <h1 class="mt0">2-Way Data Binding</h1>
+      <h1 class="mt0">Computed Properties</h1>
 
-      <div class="pure-form">
-        <div class="input-area mb2">
-          <label>Name:</label>
-          <input class="name-input" type="text" v-model="name" />
-          <span class="block mb2">{{ name }}</span>
-        </div>
+      <form class="pure-form">
+        <button class="pure-button" v-on:click.prevent="a++">Add to A</button>
+        <button class="pure-button" v-on:click.prevent="b++">Add to B</button>
+      </form>
 
-        <div class="input-area">
-          <label>Age:</label>
-          <input class="age-input" type="number" v-model="age" />
-          <span class="block">{{ age }}</span>
-        </div>
-      </div>
+      <p>A: {{ a }}</p>
+      <p>B: {{ b }}</p>
+      <p>Age + A = {{ addToA }}</p>
+      <p>Age + B = {{ addToB }}</p>
     </div>
   </div>
 
