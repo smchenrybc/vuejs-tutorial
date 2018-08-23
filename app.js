@@ -23,6 +23,9 @@ new Vue({
 
       this.coordsX = event.offsetX;
       this.coordsY = event.offsetY;
+    },
+    clickAlert: function() {
+      alert('You clicked me!');
     }
   }
 });

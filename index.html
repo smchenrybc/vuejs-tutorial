@@ -15,20 +15,22 @@
 <body>
   <div id="vue-app">
     <div class="main">
-      <h1>Events</h1>
+      <h1 class="mt0">Events</h1>
 
       <div class="pure-form">
         <button class="pure-button" v-on:click="addYears(1)">Add a year</button>
         <button class="pure-button" v-on:click="minusYears(1)">Subtract a year</button>
 
         <p class="mb0">Double-click buttons below:</p>
-        <button class="pure-button button-error mt1" @dblclick="addYears(10)">Add 10 years</button>
-        <button class="pure-button button-error mt1" @dblclick="minusYears(10)">Subtract 10 years</button>
+        <button class="pure-button button-error mt1" @click="addYears(10)">Add 10 years</button>
+        <button class="pure-button button-error mt1" @click="minusYears(10)">Subtract 10 years</button>
       </div>
 
       <p>My age is {{ age }}</p>
 
-      <div id="canvas" v-on:mousemove="updateXY">x: {{ coordsX }}, y: {{ coordsY }}</div>
+      <div id="canvas" class="mb3" v-on:mousemove="updateXY"><span>x: {{ coordsX }}, y: {{ coordsY }}</span></div>
+
+      <a href="" v-on:click.prevent="clickAlert">I'm a link</a>
     </div>
   </div>
 
