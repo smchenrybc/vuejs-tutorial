@@ -15,17 +15,26 @@
 <body>
   <div id="vue-app">
     <div class="main">
-      <h1 class="mt0">Computed Properties</h1>
+      <h1 class="h1 mt0">Dynamic CSS</h1>
 
-      <form class="pure-form">
-        <button class="pure-button" v-on:click.prevent="a++">Add to A</button>
-        <button class="pure-button" v-on:click.prevent="b++">Add to B</button>
-      </form>
+      <div class="people">
+        <h2 class="h2">Example 1</h2>
 
-      <p>A: {{ a }}</p>
-      <p>B: {{ b }}</p>
-      <p>Age + A = {{ addToA }}</p>
-      <p>Age + B = {{ addToB }}</p>
+        <div v-on:click="available = !available" v-bind:class="{available: false}" style="cursor: pointer;">
+          <span class="inline-block">Freddy</span>
+        </div>
+
+        <h2 class="h2">Example 2</h2>
+
+        <form class="pure-form mb2">
+          <button class="pure-button" v-on:click.prevent="toggleAvailable()">Toggle available</button>
+          <button class="pure-button" v-on:click.prevent="toggleNearby()">Toggle nearby</button>
+        </form>
+
+        <div v-bind:class="compClasses">
+          <span class="inline-block">Jason</span>
+        </div>
+      </div>
     </div>
   </div>
 

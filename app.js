@@ -6,26 +6,33 @@
 new Vue({
   el: "#vue-app",
   data: {
-    age: 33,
-    a: 0,
-    b: 0
+    available: false,
+    nearby: false
   },
   methods: {
-    // addToA: function() {
-    //   return this.a + this.age;
-    // },
-    // addToB: function() {
-    //   return this.b + this.age;
-    // }
+    toggleAvailable: function(available) {
+      if (this.available) {
+        this.available = false;
+      } else {
+        this.available = true;
+      }
+      this.nearby = false;
+    },
+    toggleNearby: function(nearby) {
+      if (this.nearby) {
+        this.nearby = false;
+      } else {
+        this.nearby = true;
+      }
+      this.available = false;
+    }
   },
   computed: {
-    addToA: function() {
-      console.log("addToA");
-      return this.a + this.age;
-    },
-    addToB: function() {
-      console.log("addToB");
-      return this.b + this.age;
+    compClasses: function() {
+      return {
+        available: this.available,
+        nearby: this.nearby
+      }
     }
   }
 });

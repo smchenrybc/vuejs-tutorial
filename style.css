@@ -36,6 +36,19 @@ body {
   color: var(--blue-dark);
 }
 
+.people span {
+  padding: 10px;
+  color: white;
+  background-color: red;
+  transition: background-color 0.25s ease;
+}
+.people > div.available span {
+  background-color: green;
+}
+.people > div.nearby span {
+  background-color: goldenrod;
+}
+
 /*
 Canvas
  */
