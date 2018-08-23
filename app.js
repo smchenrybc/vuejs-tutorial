@@ -7,25 +7,16 @@ new Vue({
   el: "#vue-app",
   data: {
     name: "Sean",
-    age: 33,
-    coordsX: 0,
-    coordsY: 0
+    age: 33
   },
   methods: {
-    addYears: function(inc) {
-      this.age += inc;
+    logName: function(event) {
+      let name = event.target.value;
+      console.log('You entered ' + name + '!');
     },
-    minusYears: function(dec) {
-      this.age -= dec;
+    logAge: function(event) {
+      let age = event.target.value;
+      console.log('You entered ' + age + '!');
     },
-    updateXY: function(event) {
-      // console.log(event);
-
-      this.coordsX = event.offsetX;
-      this.coordsY = event.offsetY;
-    },
-    clickAlert: function() {
-      alert('You clicked me!');
-    }
   }
 });
