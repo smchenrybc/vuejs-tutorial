@@ -1,0 +1,79 @@
+/**
+ * style.css
+ */
+
+:root {
+  --blue: #0080FF;
+  --blue-dark: #0F51BA;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 30px;
+  background-color: #EEE;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+}
+.main {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #CCC;
+}
+.main a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.375s ease;
+}
+.main a:hover,
+.main a:focus {
+  color: var(--blue-dark);
+}
+
+/*
+Canvas
+ */
+#canvas {
+  padding: 20px;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  border: 1px solid var(--blue);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+
+/*
+Buttons
+ */
+.pure-button.button-success,
+.pure-button.button-error,
+.pure-button.button-warning,
+.pure-button.button-secondary {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.pure-button.button-success {
+  background: rgb(28, 184, 65); /* this is a blue */
+}
+
+.pure-button.button-error {
+  background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.pure-button.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.pure-button.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+}

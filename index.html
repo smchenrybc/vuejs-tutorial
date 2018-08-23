@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>VueJS Test</title>
+  <!-- Web fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <!-- Styles -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- Dependencies -->
+  <link href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" rel="stylesheet">
+  <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+</head>
+<body>
+  <div id="vue-app">
+    <div class="main">
+      <h1>Events</h1>
+
+      <div class="pure-form">
+        <button class="pure-button" v-on:click="addYears(1)">Add a year</button>
+        <button class="pure-button" v-on:click="minusYears(1)">Subtract a year</button>
+
+        <p class="mb0">Double-click buttons below:</p>
+        <button class="pure-button button-error mt1" @dblclick="addYears(10)">Add 10 years</button>
+        <button class="pure-button button-error mt1" @dblclick="minusYears(10)">Subtract 10 years</button>
+      </div>
+
+      <p>My age is {{ age }}</p>
+
+      <div id="canvas" v-on:mousemove="updateXY">x: {{ coordsX }}, y: {{ coordsY }}</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
