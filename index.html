@@ -15,26 +15,15 @@
 <body>
   <div id="vue-app">
     <div class="main">
-      <h1 class="h1 mt0">Dynamic CSS</h1>
+      <h1 class="h1 mt0">Conditionals</h1>
 
-      <div class="people">
-        <h2 class="h2">Example 1</h2>
+      <form class="pure-form">
+        <button class="pure-button" v-on:click.prevent="error = !error">Toggle Error</button>
+        <button class="pure-button" v-on:click.prevent="success = !success">Toggle Success</button>
 
-        <div v-on:click="available = !available" v-bind:class="{available: false}" style="cursor: pointer;">
-          <span class="inline-block">Freddy</span>
-        </div>
-
-        <h2 class="h2">Example 2</h2>
-
-        <form class="pure-form mb2">
-          <button class="pure-button" v-on:click.prevent="toggleAvailable()">Toggle available</button>
-          <button class="pure-button" v-on:click.prevent="toggleNearby()">Toggle nearby</button>
-        </form>
-
-        <div v-bind:class="compClasses">
-          <span class="inline-block">Jason</span>
-        </div>
-      </div>
+        <p class="red mb0" v-show="error">There is an error!</p>
+        <p class="green mb0" v-show="success">It's a success!</p>
+      </form>
     </div>
   </div>
 
