@@ -3,24 +3,38 @@
  */
 
 // set Vue instance
-new Vue({
-  el: "#vue-app",
+var one = new Vue({
+  el: "#vue-app-one",
   data: {
-    characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
-    ninjas: [
-      { name: 'Ryu', age: 27 },
-      { name: 'Akuma', age: 31 },
-      { name: 'Ken', age: 25 }
-    ],
-    dudes: [
-      { name: 'Chad', age: 25 },
-      { name: 'JT', age: 26 }
-    ]
+    title: "Vue App One"
   },
   methods: {
 
   },
   computed: {
-
+    greet: function() {
+      return 'Hello from App One!';
+    }
   }
 });
+
+var two = new Vue({
+  el: "#vue-app-two",
+  data: {
+    title: "Vue App Two"
+  },
+  methods: {
+    changeTitle: function(event) {
+      one.title = "App 1 New Title";
+      event.target.disabled = true;
+    }
+  },
+  computed: {
+    greet: function() {
+      return 'Hello from App Two!';
+    }
+  }
+});
+
+// It even works outside instantiation
+// two.title = "Changed from outside!";

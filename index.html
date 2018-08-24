@@ -13,42 +13,22 @@
   <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
 </head>
 <body>
-  <div id="vue-app">
+  <div id="page">
     <div class="main">
-      <h1 class="h1 mt0">Looping with v-for</h1>
+      <h1 class="h1 mt0">Multiple Vue Instances</h1>
 
-      <div class="chars mb3">
-        <span>Characters:</span>
-        <ul>
-          <li v-for="(character, index) in characters">{{ index }}. {{ character }}</li>
-        </ul>
+      <div id="vue-app-one">
+        <h2 class="h2">{{ title }}</h2>
+        <p>{{ greet }}</p>
       </div>
 
-      <div id="ninjas-1" class="mb3">
-        <span>Ninjas:</span>
-        <ul>
-          <li v-for="(ninja, index) in ninjas">{{ index }}. {{ ninja.name }} &ndash; {{ ninja.age }}</li>
-        </ul>
+      <div id="vue-app-two">
+        <h2 class="h2">{{ title }}</h2>
+        <p>{{ greet }}</p>
+        <button class="pure-button" v-on:click="changeTitle(event)">Change App 1 Title</button>
       </div>
-
-      <div id="ninjas-2" class="mb3">
-        <template v-for="(ninja, index) in ninjas">
-          <div v-bind:class="`ninja-${index} mb1`">
-            <h3 class="h3 mt0 mb1">{{ ninja.name }}</h3>
-            <p class="m0">{{ ninja.age }}</p>
-          </div>
-        </template>
-      </div>
-
-      <div id="ninjas-3" class="mb3">
-        <template v-for="ninja in ninjas">
-          <div v-for="(val, key) in ninja" class="mb1">
-            <p class="m0"><strong style="text-transform: capitalize;">{{ key }}</strong>: {{ val }}</p>
-          </div>
-        </template>
-      </div>
-    </div>
-  </div>
+    </div><!-- .main -->
+  </div><!-- #page -->
 
   <script src="app.js"></script>
 </body>
