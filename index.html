@@ -15,15 +15,38 @@
 <body>
   <div id="vue-app">
     <div class="main">
-      <h1 class="h1 mt0">Conditionals</h1>
+      <h1 class="h1 mt0">Looping with v-for</h1>
 
-      <form class="pure-form">
-        <button class="pure-button" v-on:click.prevent="error = !error">Toggle Error</button>
-        <button class="pure-button" v-on:click.prevent="success = !success">Toggle Success</button>
+      <div class="chars mb3">
+        <span>Characters:</span>
+        <ul>
+          <li v-for="(character, index) in characters">{{ index }}. {{ character }}</li>
+        </ul>
+      </div>
 
-        <p class="red mb0" v-show="error">There is an error!</p>
-        <p class="green mb0" v-show="success">It's a success!</p>
-      </form>
+      <div id="ninjas-1" class="mb3">
+        <span>Ninjas:</span>
+        <ul>
+          <li v-for="(ninja, index) in ninjas">{{ index }}. {{ ninja.name }} &ndash; {{ ninja.age }}</li>
+        </ul>
+      </div>
+
+      <div id="ninjas-2" class="mb3">
+        <template v-for="(ninja, index) in ninjas">
+          <div v-bind:class="`ninja-${index} mb1`">
+            <h3 class="h3 mt0 mb1">{{ ninja.name }}</h3>
+            <p class="m0">{{ ninja.age }}</p>
+          </div>
+        </template>
+      </div>
+
+      <div id="ninjas-3" class="mb3">
+        <template v-for="ninja in ninjas">
+          <div v-for="(val, key) in ninja" class="mb1">
+            <p class="m0"><strong style="text-transform: capitalize;">{{ key }}</strong>: {{ val }}</p>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 
