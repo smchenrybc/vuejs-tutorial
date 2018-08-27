@@ -22,12 +22,12 @@ body {
   line-height: 1.4;
   font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
-.main {
+#page {
   padding: 20px;
   background-color: white;
   border: 1px solid #CCC;
 }
-.main a {
+#page a {
   color: var(--blue);
   text-decoration: none;
   transition: color 0.375s ease;

@@ -14,19 +14,18 @@
 </head>
 <body>
   <div id="page">
-    <div class="main">
-      <h1 class="h1 mt0">Intro to Components</h1>
+    <div id="vue-app">
+      <h1 class="h1 mt0">{{ title }}</h1>
 
-      <div id="vue-app-one">
-        <h2 class="h2"></h2>
-        <greeting></greeting>
-      </div>
+      <h2 class="h2">Refs</h2>
 
-      <div id="vue-app-two">
-        <h2 class="h2"></h2>
-        <greeting></greeting>
-      </div>
-    </div><!-- .main -->
+      <form class="pure-form">
+        <input class="" type="text" ref="input" />
+        <button class="pure-button" v-on:click.prevent="readRefs">Click me</button>
+      </form>
+
+      <p class="mb0" ref="food">Your favorite food is: {{ food }}</p>
+    </div><!-- #vue-app -->
   </div><!-- #page -->
 
   <script src="app.js"></script>

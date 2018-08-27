@@ -2,41 +2,18 @@
  * app.js
  */
 
-Vue.component('greeting', {
-  template: '<p>Hey there, my name is {{ name }}. <button class="pure-button" v-on:click="changeName">Change name</button></p>',
-  data: function() {
-    return {
-      name: "Yoshi"
-    }
-  },
-  methods: {
-    changeName: function() {
-      this.name = "Mario";
-    }
-  }
-});
-
-// set Vue instance
-var one = new Vue({
-  el: "#vue-app-one",
+var app = new Vue({
+  el: "#vue-app",
   data: {
-
+    title: 'Referencing with $refs',
+    food: 'Pizza'
   },
   methods: {
+    readRefs: function() {
+      this.food = this.$refs.input.value;
 
-  },
-  computed: {
-
-  }
-});
-
-var two = new Vue({
-  el: "#vue-app-two",
-  data: {
-
-  },
-  methods: {
-
+      console.log(this.$refs.food.innerText);
+    }
   },
   computed: {
 
