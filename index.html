@@ -15,17 +15,16 @@
 <body>
   <div id="page">
     <div class="main">
-      <h1 class="h1 mt0">Multiple Vue Instances</h1>
+      <h1 class="h1 mt0">Intro to Components</h1>
 
       <div id="vue-app-one">
-        <h2 class="h2">{{ title }}</h2>
-        <p>{{ greet }}</p>
+        <h2 class="h2"></h2>
+        <greeting></greeting>
       </div>
 
       <div id="vue-app-two">
-        <h2 class="h2">{{ title }}</h2>
-        <p>{{ greet }}</p>
-        <button class="pure-button" v-on:click="changeTitle(event)">Change App 1 Title</button>
+        <h2 class="h2"></h2>
+        <greeting></greeting>
       </div>
     </div><!-- .main -->
   </div><!-- #page -->
