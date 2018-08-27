@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>VueJS Test</title>
-  <!-- Web fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-  <!-- Styles -->
-  <link href="style.css" rel="stylesheet" />
-  <!-- Dependencies -->
-  <link href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" rel="stylesheet">
-  <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
-</head>
-<body>
-  <div id="page">
-    <div id="vue-app">
-      <h1 class="h1 mt0">{{ title }}</h1>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vuejs-test</title>
 
-      <h2 class="h2">Refs</h2>
-
-      <form class="pure-form">
-        <input class="" type="text" ref="input" />
-        <button class="pure-button" v-on:click.prevent="readRefs">Click me</button>
-      </form>
-
-      <p class="mb0" ref="food">Your favorite food is: {{ food }}</p>
-    </div><!-- #vue-app -->
-  </div><!-- #page -->
-
-  <script src="app.js"></script>
-</body>
+    <!-- Web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet" />
+    <!-- Dependencies -->
+    <link href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" rel="stylesheet">
+    <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+  </body>
 </html>
